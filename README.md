@@ -21,3 +21,14 @@ Celery -A myproject worker -l info -P eventlet
 Celery -A myproject worker -l info
 ```
 Note：This project depends on redis. Please ensure it has been installed properly. 
+
+*************************
+在此处记录对于gitbash的代理设置
+
+# 找到自己的代理的port的4个数字的端口就行，不一定是1080口的
+git config --global http.https://github.com.proxy socks5://127.0.0.1:1080
+# 如果你的代理是http类型的，如下设置：
+git config --global http.https://github.com.proxy 'http://127.0.0.1:代理的port'
+
+# 取消代理
+git config --global --unset http.https://github.com.proxy
